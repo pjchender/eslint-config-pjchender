@@ -18,9 +18,6 @@
   ],
   "author": "pjchender <pjchender@gmail.com> (https://github.com/pjchender)",
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
