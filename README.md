@@ -14,10 +14,14 @@ npx install-peerdeps --dev eslint-config-pjchender
 
 Extends the config with the `extends` field in eslint config:
 
-```json
+```jsonc
 // .eslintrc
 {
+  // default will use rules included for TS files
   "extends": ["pjchender"]
+
+  // if you only need JavaScript and React related rules
+  "extends": ["pjchender/react"]
 }
 ```
 

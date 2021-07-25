@@ -4,24 +4,34 @@
   "description": "ESLint and Prettier Config from pjchender",
   "scripts": {
     "test": "eslint tests/* --ext .js,.jsx,.ts.,.tsx",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "npx semantic-release"
   },
   "keywords": [
     "eslint",
+    "eslintrc",
+    "eslintconfig",
     "eslint-config",
+    "styleguide",
     "lint",
     "linter",
     "prettier",
-    "typescript",
     "a11y",
+    "typescript",
     "react"
   ],
   "author": "pjchender <pjchender@gmail.com> (https://github.com/pjchender)",
   "main": "index.js",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjchender/eslint-config-pjchender/issues"
+  },
+  "homepage": "https://github.com/pjchender/eslint-config-pjchender/",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
@@ -41,11 +51,11 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.0",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
-    "typescript": "^4.3.5",
-    "husky": "^7.0.0"
+    "typescript": "^4.3.5"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.4",
