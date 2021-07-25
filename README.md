@@ -1,6 +1,6 @@
 # eslint-config-pjchender
 
-## install
+## Installation
 
 ```bash
 # install the eslint-config-pjchender
@@ -18,7 +18,7 @@ Extends the config with the `extends` field in eslint config:
 // .eslintrc
 {
   // default will use rules included for TS files
-  "extends": ["pjchender"]
+  "extends": ["pjchender"],
 
   // if you only need JavaScript and React related rules
   "extends": ["pjchender/react"]
@@ -30,8 +30,8 @@ Extends the config with the `extends` field in eslint config:
 Write files in the `tests` folder and see whether ESLint works as expected:
 
 ```bash
-npm run test
-npm run test -- --fix
+npm run lint:test
+npm run lint:test -- --fix
 ```
 
 ## Inspired By
