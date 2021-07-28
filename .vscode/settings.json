@@ -3,6 +3,8 @@
     "Parens",
     "commitlint",
     "peerdeps",
-    "typedefs"
+    "prettierrc",
+    "typedefs",
+    "wesbos"
   ]
 }
