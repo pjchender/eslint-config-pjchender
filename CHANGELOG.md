@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/pjchender/eslint-config-pjchender/compare/v0.0.3...v0.1.0) (2021-08-01)
+
+
+### Features
+
+* **typescript:** add eslint config for typescript ([e32ed6c](https://github.com/pjchender/eslint-config-pjchender/commit/e32ed6ca9054deecf7a6bd52c8782bca54a40cc5))
+
 ## [0.0.3](https://github.com/pjchender/eslint-config-pjchender/compare/v0.0.2...v0.0.3) (2021-07-25)
 
 
