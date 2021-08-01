@@ -82,6 +82,28 @@ Then use this file as the `parseOptions.project`:
 }
 ```
 
+If you want to use import alias in your project, you can use `babel-module` to do this by yourself. For example,
+
+```js
+const allExtensions = ['.ts', '.tsx', '.d.ts', '.js', '.jsx', '.json'];
+
+module.exports = {
+  settings: {
+    node: {
+      extensions: allExtensions,
+    },
+    'import/resolver': {
+      'babel-module': {
+        alias: {
+          '@': './src',
+        },
+        extensions: allExtensions,
+      },
+    },
+  },
+};
+```
+
 ### Prettier
 
 Setup prettier config:

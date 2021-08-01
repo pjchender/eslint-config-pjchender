@@ -1,5 +1,3 @@
-const allExtensions = ['.ts', '.tsx', '.d.ts', '.js', '.jsx', '.json'];
-
 module.exports = {
   env: {
     browser: true,
@@ -18,6 +16,13 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.d.ts', '.json'],
+      },
+    },
+  },
   rules: {
     // for eslint-plugin-import
     'simple-import-sort/imports': 'error',
@@ -26,7 +31,7 @@ module.exports = {
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
 
-    '@typescript-eslint/no-unused-vars': 'off', // 這個規則原本 ts 就內建了
+    '@typescript-eslint/no-unused-vars': 'off', // ts already does this
 
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     '@typescript-eslint/no-use-before-define': [
@@ -46,18 +51,5 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
-  },
-  settings: {
-    node: {
-      extensions: allExtensions,
-    },
-    'import/resolver': {
-      'babel-module': {
-        alias: {
-          '@': './src',
-        },
-        extensions: allExtensions,
-      },
-    },
   },
 };
