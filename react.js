@@ -16,13 +16,6 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
   ],
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.json'],
-      },
-    },
-  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

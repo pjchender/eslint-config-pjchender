@@ -12,6 +12,34 @@ npx install-peerdeps --dev eslint-config-pjchender
 
 ## Usage
 
+### TypeScript (React)
+
+In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, we recommend to create a `tsconfig.eslint.json` file. For example
+
+```jsonc
+// tsconfig.eslint.json
+{
+  "extends": "./tsconfig.json",
+  // include all files in the project
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "next-env.d.ts", ".eslintrc.js"],
+  "exclude": ["node_modules", "build", "scripts"]
+}
+```
+
+Then use this file as the `parseOptions.project`:
+
+```jsonc
+// .eslintrc
+{
+  // default will use rules included for TS files
+  // and remember to use parseOptions to refer you tsconfig
+  "extends": ["pjchender"],
+  "parserOptions": {
+    "project": "tsconfig.eslint.json"
+  }
+}
+```
+
 ### JavaScript (React)
 
 Extends the config with the `extends` field in eslint config:
@@ -26,26 +54,19 @@ Extends the config with the `extends` field in eslint config:
 
 ### TypeScript
 
-In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, we recommend to create a `tsconfig.eslint.json` file. For example
+For projects only use TypeScript without React, you can extend from `pjchender/typescript`. This only setup the config for TypeScript files without `.jsx` or `.tsx`.
+
+For example,
 
 ```jsonc
 // tsconfig.eslint.json
 {
   "extends": "./tsconfig.json",
-  // include all files in the project
-  "include": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx",
-    "next-env.d.ts",
-    ".eslintrc.js",
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts"
-  ]
+  "compilerOptions": {
+    "types": ["jest"]
+  },
+  "include": ["src/**/*", "tests/**/*", ".eslintrc.js", "jest.config.js", "commitlint.config.js"],
+  "exclude": ["node_modules", "build", "scripts"]
 }
 ```
 
@@ -54,9 +75,7 @@ Then use this file as the `parseOptions.project`:
 ```jsonc
 // .eslintrc
 {
-  // default will use rules included for TS files
-  // and remember to use parseOptions to refer you tsconfig
-  "extends": ["pjchender"],
+  "extends": ["pjchender/typescript"],
   "parserOptions": {
     "project": "tsconfig.eslint.json"
   }
