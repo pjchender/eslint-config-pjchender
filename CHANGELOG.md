@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.0...v0.1.1) (2021-08-01)
+
+
+### Bug Fixes
+
+* **typescript:** remove supporting import alias for typescript eslint config ([dde7456](https://github.com/pjchender/eslint-config-pjchender/commit/dde74562de2aaaba3ab302548ab66cc5d41434da))
+
 # [0.1.0](https://github.com/pjchender/eslint-config-pjchender/compare/v0.0.3...v0.1.0) (2021-08-01)
 
 
