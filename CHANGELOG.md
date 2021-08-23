@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.1...v0.1.2) (2021-08-23)
+
+
+### Bug Fixes
+
+* update npm related packages ([5e86377](https://github.com/pjchender/eslint-config-pjchender/commit/5e86377357f6954543b10a18c24716adb65fada6))
+
 ## [0.1.1](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.0...v0.1.1) (2021-08-01)
 
 
