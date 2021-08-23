@@ -7,7 +7,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'simple-import-sort'],
   extends: [
-    'eslint:recommended',
+    './base',
+    'airbnb-typescript/base',
     'plugin:jest/recommended',
     'plugin:import/errors',
     'plugin:import/typescript',
