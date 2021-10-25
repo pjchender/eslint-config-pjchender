@@ -125,7 +125,7 @@ Setup prettier config:
 }
 ```
 
-## Development
+## Development and Deployment
 
 Write files in the `tests` folder and see whether ESLint works as expected:
 
@@ -133,6 +133,8 @@ Write files in the `tests` folder and see whether ESLint works as expected:
 npm run lint:test
 npm run lint:test -- --fix
 ```
+
+After push to the main branch, the release job will automatically start.
 
 ## Inspired By
 
