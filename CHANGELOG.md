@@ -1,3 +1,11 @@
+## [0.1.3](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.2...v0.1.3) (2021-10-25)
+
+
+### Bug Fixes
+
+* replace jsxBracketSameLine with bracketSameLine ([3436560](https://github.com/pjchender/eslint-config-pjchender/commit/3436560c788c7b65f00b0f938d2774f1700cd985))
+* update npm packages ([2243a41](https://github.com/pjchender/eslint-config-pjchender/commit/2243a415a5433c22485f2d8c24d1249063a4c7a1))
+
 ## [0.1.2](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.1...v0.1.2) (2021-08-23)
 
 
