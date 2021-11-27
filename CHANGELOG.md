@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.3...v0.1.4) (2021-11-27)
+
+
+### Bug Fixes
+
+* **react:** allow JSX not allowed in files with extension '.js' ([dd01ab3](https://github.com/pjchender/eslint-config-pjchender/commit/dd01ab3e4246fdab49337f5ac55f6d61baab2020))
+
 ## [0.1.3](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.2...v0.1.3) (2021-10-25)
 
 
