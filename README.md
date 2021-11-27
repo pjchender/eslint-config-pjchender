@@ -4,7 +4,7 @@
 
 ```bash
 # install the eslint-config-pjchender
-npm install --save-dev eslint-config-pjchender
+yarn add -D eslint-config-pjchender
 
 # install the peerDependencies of eslint-config-pjchender
 npx install-peerdeps --dev eslint-config-pjchender

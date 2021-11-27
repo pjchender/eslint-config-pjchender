@@ -24,12 +24,15 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    // Allow JSX not allowed in files with extension '.js'
+    'react/jsx-filename-extension': 'off',
+
     // new JSX transform
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
 
-    /* 避免出現 'React' was used before it was defined */
+    /* Allow 'React' was used before it was defined */
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -43,7 +46,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
 
     /**
-     * 避免出現 'React' was used before it was defined 的錯誤
      * Use function hoisting to improve code readability
      */
     'no-use-before-define': 'off',
