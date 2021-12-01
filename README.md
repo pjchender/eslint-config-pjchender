@@ -12,9 +12,37 @@ npx install-peerdeps --dev eslint-config-pjchender
 
 ## Usage
 
+
+### Setup Configuration of Prettier
+
+Prettier is used for formatting code with eslint, so remember to create a `.prettierrc` in your project before using the eslint config in this project.
+
+Cause we force to use "semicolon" and "single quotes" in the lint, please make sure your prettier configuration should set the `"semi"` and `"singleQuote"` to `true`.
+
+Example prettier configuration file:
+
+```jsonc
+// .prettierrc
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always"
+}
+```
+
 ### TypeScript (React)
 
-In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, we recommend to create a `tsconfig.eslint.json` file. For example
+In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, we recommend to create a `tsconfig.eslint.json` file.
+
+For example, create a `tsconfig.eslint.json` file in your project:
 
 ```jsonc
 // tsconfig.eslint.json
@@ -26,13 +54,13 @@ In default, eslint-plugin-pjchender will use rules for TypeScript files. For pre
 }
 ```
 
-Then use this file as the `parseOptions.project`:
+Then refer this file in the config of `parseOptions.project` in `.eslintrc`:
 
 ```jsonc
 // .eslintrc
 {
   // default will use rules included for TS files
-  // and remember to use parseOptions to refer you tsconfig
+  // and remember to use parseOptions to refer your tsconfig
   "extends": ["pjchender"],
   "parserOptions": {
     "project": "tsconfig.eslint.json"
@@ -42,7 +70,7 @@ Then use this file as the `parseOptions.project`:
 
 ### JavaScript (React)
 
-Extends the config with the `extends` field in eslint config:
+Extends the config with the `extends` field in eslint config if you only need JavaScript and React related rules:
 
 ```jsonc
 // .eslintrc
@@ -56,7 +84,7 @@ Extends the config with the `extends` field in eslint config:
 
 For projects only use TypeScript without React, you can extend from `pjchender/typescript`. This only setup the config for TypeScript files without `.jsx` or `.tsx`.
 
-For example,
+For example, create a `tsconfig.eslint.json` file in your project:
 
 ```jsonc
 // tsconfig.eslint.json
@@ -70,7 +98,7 @@ For example,
 }
 ```
 
-Then use this file as the `parseOptions.project`:
+Then refer this file in the config of `parseOptions.project` in `.eslintrc`:
 
 ```jsonc
 // .eslintrc
@@ -102,27 +130,6 @@ module.exports = {
     },
   },
 };
-```
-
-### Prettier
-
-Setup prettier config:
-
-```jsonc
-// .prettierrc
-{
-  "printWidth": 100,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true, // required
-  "singleQuote": true, // required
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": false,
-  "trailingComma": "all",
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "always"
-}
 ```
 
 ## Development and Deployment

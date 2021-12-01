@@ -17,18 +17,24 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     /**
-     * 有些規則和 react 中的重複，是因為會被 extends 中的其他規則覆蓋
-     * */
+     * Some rules listed here are duplicated with the rules in "react.js"
+     * for preventing being overridden by other extensions.
+     **/
 
-    // new JSX transform
-    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+    /**
+     * new JSX transform
+     * https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+     **/
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
 
-    /* 避免出現 JSX not allowed in files with extension '.tsx' */
+    // Prevent the error of "JSX not allowed in files with extension '.tsx'"
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
 
-    /* 避免出現 'React' was used before it was defined */
+    /**
+     * Prevent the error of "Missing file extension 'ts', 'tsx'"
+     * https://stackoverflow.com/a/59268871
+     **/
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -40,19 +46,16 @@ module.exports = {
       },
     ],
 
-    /* 必須建議使用 default export */
-    'import/prefer-default-export': 'off',
-
     /**
-     * 避免出現 'React' was used before it was defined 的錯誤
-     * Use function hoisting to improve code readability
-     */
+     * Prevent the error of "'React' was used before it was defined"
+     **/
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
       { functions: false, classes: true, variables: true, typedefs: true },
     ],
 
+    'import/prefer-default-export': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
   },
 };
