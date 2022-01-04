@@ -1,3 +1,10 @@
+## [0.1.6](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.5...v0.1.6) (2022-01-04)
+
+
+### Bug Fixes
+
+* update peerDependencies ([e2d3e2b](https://github.com/pjchender/eslint-config-pjchender/commit/e2d3e2b96ad721f800879d78709497129962074e))
+
 ## [0.1.5](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.4...v0.1.5) (2022-01-04)
 
 
