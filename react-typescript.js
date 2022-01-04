@@ -46,9 +46,10 @@ module.exports = {
       },
     ],
 
-    /**
-     * Prevent the error of "'React' was used before it was defined"
-     **/
+    'import/prefer-default-export': 'off',
+
+    // for preventing "'React' was used before it was defined"
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-use-before-define.md
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
@@ -57,5 +58,8 @@ module.exports = {
 
     'import/prefer-default-export': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
+
+    // Not interested in consistent types of function components
+    'react/function-component-definition': 'off',
   },
 };

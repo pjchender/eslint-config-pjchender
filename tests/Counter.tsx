@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 interface Props {
   defaultValue: number;
 }
 
-const Counter = ({ defaultValue }: Props): JSX.Element => {
+const Counter: FC<Props> = ({ defaultValue }) => {
   const [count, setCount] = useState(defaultValue);
   const increment = () => setCount((prevCount) => prevCount + 1);
   const decrement = () => setCount((prevCount) => prevCount - 1);

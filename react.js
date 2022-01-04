@@ -42,12 +42,12 @@ module.exports = {
       },
     ],
 
-    /* 必須建議使用 default export */
     'import/prefer-default-export': 'off',
 
-    /**
-     * Use function hoisting to improve code readability
-     */
+    // for preventing "'React' was used before it was defined"
     'no-use-before-define': 'off',
+
+    // Not interested in consistent types of function components
+    'react/function-component-definition': 'off',
   },
 };
