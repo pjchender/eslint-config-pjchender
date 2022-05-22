@@ -1,3 +1,10 @@
+## [0.1.9](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.8...v0.1.9) (2022-05-22)
+
+
+### Bug Fixes
+
+* **rule:** set react/require-default-props to off for react-typescript ([8c17a6e](https://github.com/pjchender/eslint-config-pjchender/commit/8c17a6ef8279e5a565581092a755d57e0fa5e6ce))
+
 ## [0.1.8](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.7...v0.1.8) (2022-05-22)
 
 
