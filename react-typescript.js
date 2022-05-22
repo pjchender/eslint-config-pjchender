@@ -19,12 +19,12 @@ module.exports = {
     /**
      * Some rules listed here are duplicated with the rules in "react.js"
      * for preventing being overridden by other extensions.
-     **/
+     * */
 
     /**
      * new JSX transform
      * https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
-     **/
+     * */
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
 
@@ -34,7 +34,7 @@ module.exports = {
     /**
      * Prevent the error of "Missing file extension 'ts', 'tsx'"
      * https://stackoverflow.com/a/59268871
-     **/
+     * */
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -45,8 +45,6 @@ module.exports = {
         tsx: 'never',
       },
     ],
-
-    'import/prefer-default-export': 'off',
 
     // for preventing "'React' was used before it was defined"
     // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-use-before-define.md
