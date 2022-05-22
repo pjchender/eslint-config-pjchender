@@ -1,3 +1,10 @@
+## [0.1.8](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.7...v0.1.8) (2022-05-22)
+
+
+### Bug Fixes
+
+* add jest in peerDenepencies and upgrade npm packages ([50bb719](https://github.com/pjchender/eslint-config-pjchender/commit/50bb719dfe7e9c75694ce667b21809732a12b3c7))
+
 ## [0.1.7](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.6...v0.1.7) (2022-02-02)
 
 
