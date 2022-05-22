@@ -31,6 +31,10 @@ module.exports = {
     // Prevent the error of "JSX not allowed in files with extension '.tsx'"
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
 
+    // You May Not Need defaultProps
+    // https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/default_props/
+    'react/require-default-props': 'off',
+
     /**
      * Prevent the error of "Missing file extension 'ts', 'tsx'"
      * https://stackoverflow.com/a/59268871
