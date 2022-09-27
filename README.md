@@ -143,6 +143,31 @@ npm run lint:test -- --fix
 
 After push to the main branch, the release job will automatically start.
 
+## MISC
+
+### xxx should be listed in the project's dependencies, not devDependencies
+
+By default, eslint-config-pjchender does not care about the packages is dependencies or devDependencies in `'**/*.test.ts'`, `'**/*.test.tsx'`, `'**/*.stories.ts'`, `'**/*.stories.tsx'`. However, you might still use some package that should be listed in devDependencies. In this case, you can modify the rule of `import/no-extraneous-dependencies` in eslint config file manually. For example,
+
+```json
+{
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/*.stories.ts",
+          "**/*.stories.tsx",
+          "vite.config.ts"
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## Inspired By
 
 - [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript)
