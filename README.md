@@ -12,7 +12,6 @@ npx install-peerdeps --dev eslint-config-pjchender
 
 ## Usage
 
-
 ### Setup Configuration of Prettier
 
 Prettier is used for formatting code with eslint, so remember to create a `.prettierrc` in your project before using the eslint config in this project.
@@ -110,28 +109,6 @@ Then refer this file in the config of `parseOptions.project` in `.eslintrc`:
 }
 ```
 
-If you want to use import alias in your project, you can use `babel-module` to do this by yourself. For example,
-
-```js
-const allExtensions = ['.ts', '.tsx', '.d.ts', '.js', '.jsx', '.json'];
-
-module.exports = {
-  settings: {
-    node: {
-      extensions: allExtensions,
-    },
-    'import/resolver': {
-      'babel-module': {
-        alias: {
-          '@': './src',
-        },
-        extensions: allExtensions,
-      },
-    },
-  },
-};
-```
-
 ## Development and Deployment
 
 Write files in the `tests` folder and see whether ESLint works as expected:
@@ -144,6 +121,28 @@ npm run lint:test -- --fix
 After push to the main branch, the release job will automatically start.
 
 ## MISC
+
+### Absolute Imports and Module Path Aliases for TypeScript
+
+If you want to use import alias in your project, you can use `import-resolver-typescript` to do this by yourself. For example,
+
+```jsonc
+// .eslintrc
+{
+  // ...
+  "rules": {
+    "import/no-unresolved": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "tsconfig.json"
+      }
+    }
+  }
+}
+```
 
 ### xxx should be listed in the project's dependencies, not devDependencies
 
