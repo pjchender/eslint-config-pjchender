@@ -3,7 +3,7 @@
   "version": "0.1.11",
   "description": "ESLint and Prettier Config from pjchender",
   "scripts": {
-    "test": "eslint tests/* --ext .js,.jsx,.ts,.tsx",
+    "test": "eslint tests/* --ext .js,.jsx,.ts,.tsx --cache",
     "prepare": "husky install",
     "semantic-release": "npx semantic-release"
   },
