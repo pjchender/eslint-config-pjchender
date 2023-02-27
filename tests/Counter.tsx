@@ -27,6 +27,11 @@ const Counter: FC<Props> = ({ defaultValue }) => {
         Reset
       </button>
       <span>{count}</span>
+
+      <label>
+        <input type="checkbox" />
+        Disable button
+      </label>
     </div>
   );
 };

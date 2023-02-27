@@ -49,5 +49,13 @@ module.exports = {
 
     // Not interested in consistent types of function components
     'react/function-component-definition': 'off',
+
+    // asserts that the label has htmlFor, a nested label, both or either.
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        assert: 'either',
+      },
+    ],
   },
 };
