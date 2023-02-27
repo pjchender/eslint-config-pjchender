@@ -1,3 +1,10 @@
+## [0.1.13](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.12...v0.1.13) (2023-02-27)
+
+
+### Bug Fixes
+
+* update jsx-a11y rules to assert either label has htmlFor, a nested label, both or either ([435c23d](https://github.com/pjchender/eslint-config-pjchender/commit/435c23db0ebc3f05966feb671a146c9a73b2a19c))
+
 ## [0.1.12](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.11...v0.1.12) (2023-02-25)
 
 
