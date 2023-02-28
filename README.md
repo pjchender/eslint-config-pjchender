@@ -109,6 +109,8 @@ Then refer this file in the config of `parseOptions.project` in `.eslintrc`:
 }
 ```
 
+If you have some config files in the project root which is not need to be linted, you can add them to the `exclude` field in `tsconfig.eslint.json` or in `.eslintignore` file.
+
 ## Development and Deployment
 
 Write files in the `tests` folder and see whether ESLint works as expected:

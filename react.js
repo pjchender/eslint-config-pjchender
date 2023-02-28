@@ -14,6 +14,8 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:import/recommended',
     'plugin:jest/recommended',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
   ],
   parserOptions: {
