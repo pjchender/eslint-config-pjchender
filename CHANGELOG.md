@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.13...v0.2.0) (2023-02-28)
+
+
+### Features
+
+* add eslint pluging of testing-library and jest-dom ([91b76cc](https://github.com/pjchender/eslint-config-pjchender/commit/91b76cc4772cdbeeb02dd7f6755e7f37c78e169e))
+
 ## [0.1.13](https://github.com/pjchender/eslint-config-pjchender/compare/v0.1.12...v0.1.13) (2023-02-27)
 
 
