@@ -3,9 +3,8 @@ module.exports = {
     browser: true,
     commonjs: true,
     es2021: true,
-    jest: true,
   },
-  plugins: ['promise', 'jest'],
+  plugins: ['promise'],
   extends: [
     './base',
     'airbnb',
@@ -13,9 +12,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:promise/recommended',
     'plugin:import/recommended',
-    'plugin:jest/recommended',
-    'plugin:testing-library/react',
-    'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
   ],
   parserOptions: {
