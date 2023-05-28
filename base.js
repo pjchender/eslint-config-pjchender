@@ -4,8 +4,8 @@ module.exports = {
     commonjs: true,
     es2021: true,
   },
-  plugins: ['simple-import-sort', 'import', 'prettier'],
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  plugins: ['simple-import-sort', 'import'],
+  extends: ['airbnb-base', 'prettier'],
   settings: {
     'import/resolver': {
       node: {

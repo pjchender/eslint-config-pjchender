@@ -12,7 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:promise/recommended',
     'plugin:import/recommended',
-    'plugin:prettier/recommended',
+    'prettier',
   ],
   parserOptions: {
     ecmaFeatures: {
