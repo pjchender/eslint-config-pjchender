@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pjchender",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ESLint and Prettier Config from pjchender",
   "scripts": {
     "test": "eslint tests/* --ext .js,.jsx,.ts,.tsx --cache",
