@@ -1,3 +1,11 @@
+# [0.3.0](https://github.com/pjchender/eslint-config-pjchender/compare/v0.2.1...v0.3.0) (2023-05-28)
+
+
+### Features
+
+* remove eslint-plugin-prettier ([5abd624](https://github.com/pjchender/eslint-config-pjchender/commit/5abd624da0528375c8ede1c100b7840c90738d7b))
+* remove jest and testing-library from dependencies ([d5f280a](https://github.com/pjchender/eslint-config-pjchender/commit/d5f280a57c5b8f8e40c421502afdbb6657ce8470))
+
 ## [0.2.1](https://github.com/pjchender/eslint-config-pjchender/compare/v0.2.0...v0.2.1) (2023-05-28)
 
 
