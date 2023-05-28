@@ -116,8 +116,8 @@ If you have some config files in the project root which is not need to be linted
 Write files in the `tests` folder and see whether ESLint works as expected:
 
 ```bash
-npm run lint:test
-npm run lint:test -- --fix
+npm run test
+npm run test -- --fix
 ```
 
 After push to the main branch, the release job will automatically start.
