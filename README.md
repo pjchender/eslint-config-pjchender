@@ -23,23 +23,41 @@ Example prettier configuration file:
 ```jsonc
 // .prettierrc
 {
-  "printWidth": 100,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": true,
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": false,
-  "trailingComma": "all",
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "always"
+  "singleQuote": true
 }
 ```
 
 ### TypeScript (React)
 
-In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, we recommend to create a `tsconfig.eslint.json` file.
+In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, there are two simple ways to solve. Check the FAQs section regarding ["I get errors telling me "ESLint was configured to run ... However, that TSConfig does not / none of those TSConfigs include this file"](https://typescript-eslint.io/linting/troubleshooting/#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file) for more details.
+
+#### Exclude unnecessary files from type-aware linting
+
+Use ESLint's overrides configuration to configure the file to not be parsed with type information. For example,
+
+```js
+// .eslintrc.cjs
+module.exports = {
+  // ... the rest of your config ...
+  overrides: [
+    {
+      // highlight-start
+      // specify the files that should be has type-aware linting:
+      files: ['./src/**/*.{ts,tsx}'],
+      // highlight-end
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: __dirname,
+      },
+      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+    },
+  ],
+};
+```
+
+#### Include files with type-aware linting
+
+Create a `tsconfig.eslint.json` file.
 
 For example, create a `tsconfig.eslint.json` file in your project:
 
