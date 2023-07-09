@@ -10,7 +10,6 @@ module.exports = {
     'airbnb-typescript',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -63,4 +62,10 @@ module.exports = {
     // Not interested in consistent types of function components
     'react/function-component-definition': 'off',
   },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+    },
+  ],
 };

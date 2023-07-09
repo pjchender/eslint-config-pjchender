@@ -16,7 +16,7 @@ npx install-peerdeps --dev eslint-config-pjchender
 
 In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, there are two simple ways to solve. Check the FAQs section regarding ["I get errors telling me "ESLint was configured to run ... However, that TSConfig does not / none of those TSConfigs include this file"](https://typescript-eslint.io/linting/troubleshooting/#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file) for more details.
 
-#### Exclude unnecessary files from type-aware linting
+#### Linting with Type Information
 
 Use ESLint's overrides configuration to configure the file to not be parsed with type information. For example,
 
@@ -29,46 +29,7 @@ module.exports = {
     project: true, // for monorepo, ["./tsconfig.base.json", "./apps/*/tsconfig.json"]
     tsconfigRootDir: __dirname, // "."
   },
-  overrides: [
-    {
-      // highlight-start
-      // specify the files that should be has type-aware linting:
-      files: ['./src/**/*.{ts,tsx}'],
-      // highlight-end
-      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
-    },
-  ],
 };
-```
-
-#### Include files with type-aware linting
-
-Create a `tsconfig.eslint.json` file.
-
-For example, create a `tsconfig.eslint.json` file in your project:
-
-```jsonc
-// tsconfig.eslint.json
-{
-  "extends": "./tsconfig.json",
-  // include all files in the project
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "next-env.d.ts", ".eslintrc.js"],
-  "exclude": ["node_modules", "build", "scripts"]
-}
-```
-
-Then refer this file in the config of `parseOptions.project` in `.eslintrc`:
-
-```jsonc
-// .eslintrc
-{
-  // default will use rules included for TS files
-  // and remember to use parseOptions to refer your tsconfig
-  "extends": ["pjchender"],
-  "parserOptions": {
-    "project": "tsconfig.eslint.json"
-  }
-}
 ```
 
 ### JavaScript (React)

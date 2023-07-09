@@ -13,7 +13,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -45,12 +44,12 @@ module.exports = {
         ignoreTypeReferences: true,
       },
     ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['**/*.test.ts', '**/*.test.tsx', '**/*.stories.ts', '**/*.stories.tsx'],
-      },
-    ],
     'import/prefer-default-export': 'off',
   },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+    },
+  ],
 };
