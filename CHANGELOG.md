@@ -1,3 +1,11 @@
+## [0.3.2](https://github.com/pjchender/eslint-config-pjchender/compare/v0.3.1...v0.3.2) (2023-07-09)
+
+
+### Bug Fixes
+
+* add linter for react-testing ([fd4f484](https://github.com/pjchender/eslint-config-pjchender/commit/fd4f4841e09df941c1d1eb83e4a0a7d5c7823a55))
+* simplify the setting for type information lint ([207a4e2](https://github.com/pjchender/eslint-config-pjchender/commit/207a4e23e569e24e5814bc66be9b7545bc4b0cfd))
+
 ## [0.3.1](https://github.com/pjchender/eslint-config-pjchender/compare/v0.3.0...v0.3.1) (2023-07-09)
 
 
