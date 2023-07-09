@@ -39,16 +39,17 @@ Use ESLint's overrides configuration to configure the file to not be parsed with
 // .eslintrc.cjs
 module.exports = {
   // ... the rest of your config ...
+  extends: ['pjchender'],
+  parserOptions: {
+    project: true, // for monorepo, ["./tsconfig.base.json", "./apps/*/tsconfig.json"]
+    tsconfigRootDir: __dirname, // "."
+  },
   overrides: [
     {
       // highlight-start
       // specify the files that should be has type-aware linting:
       files: ['./src/**/*.{ts,tsx}'],
       // highlight-end
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: __dirname,
-      },
       extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
     },
   ],
@@ -223,7 +224,7 @@ By default, eslint-config-pjchender does not care about the packages is dependen
     "react-refresh/only-export-components": "warn",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-no-bind": "off",
-    "react/display-name": "off",
+    "react/display-name": "off"
   }
 }
 ```
