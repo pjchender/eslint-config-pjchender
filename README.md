@@ -12,21 +12,6 @@ npx install-peerdeps --dev eslint-config-pjchender
 
 ## Usage
 
-### Setup Configuration of Prettier
-
-Prettier is used for formatting code with eslint, so remember to create a `.prettierrc` in your project before using the eslint config in this project.
-
-Cause we force to use "semicolon" and "single quotes" in the lint, please make sure your prettier configuration should set the `"semi"` and `"singleQuote"` to `true`.
-
-Example prettier configuration file:
-
-```jsonc
-// .prettierrc
-{
-  "singleQuote": true
-}
-```
-
 ### TypeScript (React)
 
 In default, eslint-plugin-pjchender will use rules for TypeScript files. For preventing the conflict between ESLint and tsconfig, there are two simple ways to solve. Check the FAQs section regarding ["I get errors telling me "ESLint was configured to run ... However, that TSConfig does not / none of those TSConfigs include this file"](https://typescript-eslint.io/linting/troubleshooting/#i-get-errors-telling-me-eslint-was-configured-to-run--however-that-tsconfig-does-not--none-of-those-tsconfigs-include-this-file) for more details.
