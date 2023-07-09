@@ -130,6 +130,24 @@ Then refer this file in the config of `parseOptions.project` in `.eslintrc`:
 
 If you have some config files in the project root which is not need to be linted, you can add them to the `exclude` field in `tsconfig.eslint.json` or in `.eslintignore` file.
 
+### Linter for React Testing
+
+If you want to use the ESLint config of [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom) and [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) from the React Testing , you can extend from `pjchender/react-testing`.
+
+For example,
+
+```jsonc
+// .eslintrc
+{
+  "overrides": [
+    {
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["pjchender/react-testing"]
+    }
+  ]
+}
+```
+
 ## Development and Deployment
 
 Write files in the `tests` folder and see whether ESLint works as expected:
