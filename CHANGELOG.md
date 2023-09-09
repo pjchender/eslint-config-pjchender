@@ -1,3 +1,15 @@
+# [0.4.0](https://github.com/pjchender/eslint-config-pjchender/compare/v0.3.2...v0.4.0) (2023-09-09)
+
+
+### Bug Fixes
+
+* update rules ([394b4c7](https://github.com/pjchender/eslint-config-pjchender/commit/394b4c7c68ac152bd0ec164b46648d28423e4251))
+
+
+### Features
+
+* bump npm packages ([6561c9b](https://github.com/pjchender/eslint-config-pjchender/commit/6561c9bc8fbfa3695b7adb2ed203c27d64f01fd1))
+
 ## [0.3.2](https://github.com/pjchender/eslint-config-pjchender/compare/v0.3.1...v0.3.2) (2023-07-09)
 
 
