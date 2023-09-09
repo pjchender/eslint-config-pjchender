@@ -56,11 +56,24 @@ module.exports = {
       { functions: false, classes: true, variables: true, typedefs: true },
     ],
 
-    'import/prefer-default-export': 'off',
-    '@typescript-eslint/ban-ts-comment': 'warn',
 
     // Not interested in consistent types of function components
     'react/function-component-definition': 'off',
+
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "@typescript-eslint/no-floating-promises": [
+      "error",
+      {
+        "ignoreVoid": true
+      }
+    ],
   },
   overrides: [
     {

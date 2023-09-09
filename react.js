@@ -29,6 +29,8 @@ module.exports = {
     // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    "react/display-name": "off",
+    "react/jsx-no-bind": "off",
 
     /* Allow 'React' was used before it was defined */
     'import/extensions': [

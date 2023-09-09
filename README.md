@@ -4,7 +4,7 @@
 
 ```bash
 # install the eslint-config-pjchender
-yarn add -D eslint-config-pjchender
+npm install -D eslint-config-pjchender
 
 # install the peerDependencies of eslint-config-pjchender
 npx install-peerdeps --dev eslint-config-pjchender
@@ -157,18 +157,6 @@ By default, eslint-config-pjchender does not care about the packages is dependen
 ```json
 {
   "rules": {
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false
-      }
-    ],
-    "no-plusplus": [
-      "error",
-      {
-        "allowForLoopAfterthoughts": true
-      }
-    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -179,16 +167,8 @@ By default, eslint-config-pjchender does not care about the packages is dependen
         "tsx": "never"
       }
     ],
-    "@typescript-eslint/no-misused-promises": [
-      "error",
-      {
-        "checksVoidReturn": false
-      }
-    ],
     "react-refresh/only-export-components": "warn",
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-no-bind": "off",
-    "react/display-name": "off"
   }
 }
 ```
