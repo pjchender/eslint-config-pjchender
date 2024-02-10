@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/pjchender/eslint-config-pjchender/compare/v0.4.1...v0.5.0) (2024-02-10)
+
+
+### Features
+
+* bump npm packages ([f174579](https://github.com/pjchender/eslint-config-pjchender/commit/f1745792a595826f0113fc3380fecb940db6982c))
+
 ## [0.4.1](https://github.com/pjchender/eslint-config-pjchender/compare/v0.4.0...v0.4.1) (2024-02-10)
 
 
